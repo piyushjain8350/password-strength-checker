@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Password Strength Checker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Strength Checker</h1>
+        <form method="POST">
+            <input type="password" name="password" placeholder="Enter your password" required/>
+            <button type="submit">Check Strength</button>
+        </form>
+        {% if strength %}
+            <p class="result">Password Strength: <strong>{{ strength }}</strong></p>
+        {% endif %}
+        
+        <form method="POST">
+            <button type="submit" name="generate" value="1" class="generate-btn">Suggest Strong Password</button>
+        </form>
+        {% if suggested_password %}
+            <p class="suggestion">Suggested Password: <strong>{{ suggested_password }}</strong></p>
+        {% endif %}
+    </div>
+</body>
+</html>
