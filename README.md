@@ -7,7 +7,7 @@ This is a Python Flask web application that checks the strength of a given passw
 - Comparison against a list of common weak passwords
 
 🌐 **Live Demo:**  
-👉 (https://password-strength-checker-9oag.onrender.com)
+👉 (https://password-strength-checker-jmcr.onrender.com/)
 
 ---
 
